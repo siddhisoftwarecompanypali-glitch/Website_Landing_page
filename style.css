@@ -194,13 +194,14 @@ a {
 }
 .line-white {
   background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.8) 100%
+    177.4deg,
+    #FFFFFF 36.29%,
+    rgba(255, 255, 255, 0.3) 86.35%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 /* Sub heading */
 .hero p {
