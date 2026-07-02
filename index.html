@@ -1143,6 +1143,28 @@
         projectForm.reset();
         closeModal();
       });
+
+      // Select placeholder color helper
+      const selects = document.querySelectorAll('.form-group select');
+      selects.forEach(select => {
+        if (select.value === "") {
+          select.style.color = '#94a3b8';
+        } else {
+          select.style.color = '#0f172a';
+        }
+        select.addEventListener('change', () => {
+          if (select.value === "") {
+            select.style.color = '#94a3b8';
+          } else {
+            select.style.color = '#0f172a';
+          }
+        });
+        projectForm.addEventListener('reset', () => {
+          setTimeout(() => {
+            select.style.color = '#94a3b8';
+          }, 10);
+        });
+      });
     }
   </script>
 </body>
