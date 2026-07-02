@@ -20,185 +20,800 @@
 
   <!-- ==========================NAVIGATION BAR============================= -->
   <nav id="navbar">
-    <div class="logo"><img src="/assests/sidhi_logo.png"></div>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-bold">Siddhi</span> <span class="logo-light">SOFTWARE CO.</span>
+      </div>
 
-    <!-- Hamburger Icon for mobile -->
-    <div id="menuIcon" class="menu-icon" aria-label="menu" role="button" tabindex="0">
-      <img src="assests/menu_icon.png">
+      <!-- Hamburger Icon for mobile -->
+      <div id="menuIcon" class="menu-icon" aria-label="menu" role="button" tabindex="0">
+        <img src="assests/menu_icon.png">
+      </div>
+
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">What we build</a>
+        <a href="#">Products</a>
+        <a href="#">Process</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <a href="#" class="nav-btn">Start a project</a>
     </div>
-
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Our Work</a>
-      <a href="#">About Us</a>
-      <a href="#">Blog</a>
-    </div>
-
-    <a href="#" class="nav-btn">Get Started</a>
   </nav>
   <!-- Mobile Dropdown Menu -->
   <div id="mobileMenu" aria-hidden="true">
-    <a href="#">Home</a>
-    <a href="#">Our Work</a>
-    <a href="#">About Us</a>
-    <a href="#">Blog</a>
-    <a href="#" class="mob-btn">Get Started</a>
+    <a href="#">About</a>
+    <a href="#">What we build</a>
+    <a href="#">Products</a>
+    <a href="#">Process</a>
+    <a href="#">Contact</a>
+    <a href="#" class="mob-btn">Start a project</a>
   </div>
 
 
-  <!-- ========================== HERO SECTION============================= -->
-  <section class="hero">
-    <div>
-      <h1 id="h1">
-        <p class="line-white">Unleash the power of</p>
-        <p class="line-white">Intuitive Development</p>
-      </h1>
+  <!-- ========================== HERO WRAPPER BLOCK ============================= -->
+  <div class="hero-wrapper-block">
+    <!-- ========================== HERO SECTION ============================= -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            Empowering<br>
+            Businesses<br>
+            Through <span class="text-blue">Digital<br>Innovation</span>
+          </h1>
+          <p class="hero-desc">
+            Siddhi Software Company designs and develops modern mobile apps, websites, games and custom software — built to be reliable, user-friendly and scalable for the businesses of today.
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn-hero-primary">Get Started</a>
+            <a href="#" class="btn-hero-secondary">
+              <span class="play-icon-container">
+                <i class="bi bi-play-fill"></i>
+              </span>
+              View Our Work
+            </a>
+          </div>
+        </div>
 
-      <p>
-        We design and build engaging games and high-performance apps <br />
-        — from prototypes to launches that scale.
-      </p>
-
-      <div class="hero-buttons">
-        <a class="btn-primary" href="#">Get Connected</a>
-
-        <a class="btn-secondary" href="#">
-          Learn More
-        </a>
-        <i class="bi bi-chevron-right"></i>
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img src="assests/office_workspace.jpg" alt="Siddhi Software Office Workspace" class="hero-image">
+            
+            <!-- Floating Badge -->
+            <div class="floating-badge">
+              <div class="badge-icon-box">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <div class="badge-text-box">
+                <span class="badge-title">99.9% Uptime</span>
+                <span class="badge-sub">Reliable delivery, guaranteed</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="skills-slider">
-      <div class="skills-track">
-        <span><img src="assests/slider_icon_figma.png"> Figma</span>
-        <span><img src="assests/slider_icon_android.png"> Android</span>
-        <span><img src="assests/slider_icon_unity.png"> Unity</span>
-        <span><img src="assests/slider_icon_android.png"> React Native</span>
-        <span><img src="assests/slider_icon_js.png"> Java Script</span>
-        <span><i class="bi bi-stars"></i> Artificial Intelligence</span>
-        <span> <i class="bi bi-filetype-php"></i>Php</span>
-
-        <!-- DUPLICATE for seamless infinite loop-->
-        <span><img src="assests/slider_icon_figma.png"> Figma</span>
-        <span><img src="/assests/slider_icon_android.png"> Android</span>
-        <span><img src="assests/slider_icon_unity.png"> Unity</span>
-        <span><img src="assests/slider_icon_android.png"> React Native</span>
-        <span><img src="assests/slider_icon_js.png"> Java Script</span>
-        <span><i class="bi bi-stars"></i> Artificial Intelligence</span>
-        <span> <i class="bi bi-filetype-php"></i>Php</span>
+    <!-- ========================== STATS SECTION ============================= -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3 class="stat-number">5+</h3>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">50+</h3>
+          <p class="stat-label">Products Delivered</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">12+</h3>
+          <p class="stat-label">Expert Engineers</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">24/7</h3>
+          <p class="stat-label">Client Support</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-
-  <section class="why-section">
-    <div class="why-left">
-      <img src="assests/container_member_image.png">
-    </div>
-    <div class="why-right">
-      <h2>Why our work stands out</h2>
-      <ul>
-        <li>Player-first design that keeps engagement high.</li><br>
-        <li>Clean, performance-focused code for smooth gameplay and app stability.</li><br>
-        <li>Rapid iteration: play test, build, publish.</li>
-        <li>Rapid iteration: play test, build, publish.</li>
-        <li>Rapid iteration: play test, build, publish.</li>
-        <li>Rapid iteration: play test, build, publish.</li>
-        <li>Rapid iteration: play test, build, publish.</li>
-        <li>Rapid iteration: play test, build, publish.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="info-section">
-    <h2>Everything You Need To Know&nbsp; About our Work</h2>
-    <p>
-      Trusted by businesses & individuals to deliver high-quality solutions —<br />
-      from mobile games to enterprise apps.
-    </p>
-  </section>
-
-  <section class="services-section">
-    <div class="service-card">
-      <img src="assests/card_game.jpg" alt="Game Development" />
-      <div class="service-content">
-        <h3>Game Development</h3>
-        <p>We craft engaging mobile and desktop games — full cycle from concept to live ops.</p>
+  <!-- ========================== ABOUT US SECTION ============================= -->
+  <section class="about-features-section">
+    <div class="about-features-container">
+      <div class="about-features-left">
+        <h2 class="section-title">
+          A small studio building <span class="text-blue">useful, well-made</span> digital products.
+        </h2>
+        <p class="section-desc">
+          Siddhi Software Company designs and develops mobile apps, websites, games and custom software. We care about quality, performance and design — and above all, whether real people can actually enjoy using what we build.
+        </p>
+        <a href="#" class="section-link">See what we build <i class="bi bi-arrow-right"></i></a>
       </div>
-    </div>
 
-    <div class="service-card">
-      <img src="assests/card_app.jpg" alt="App Development" />
-      <div class="service-content">
-        <h3>APP Development</h3>
-        <p>Production-ready Android & iOS apps with clean UI and scalable backend integration.</p>
-      </div>
-    </div>
+      <div class="about-features-right">
+        <div class="features-grid">
+          
+          <!-- Feature Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="bi bi-palette"></i>
+            </div>
+            <h4 class="feature-card-title">Design-first</h4>
+            <p class="feature-card-desc">Clean, intentional interfaces built around real users.</p>
+          </div>
 
-    <div class="service-card">
-      <img src="assests/card_custom.jpg" alt="Custom Development" />
-      <div class="service-content">
-        <h3>Custom Development</h3>
-        <p>Tailored tools and systems to automate workflows and power your product.</p>
-      </div>
-    </div>
-  </section>
+          <!-- Feature Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h4 class="feature-card-title">Modern engineering</h4>
+            <p class="feature-card-desc">Reliable, scalable code — tested and maintained.</p>
+          </div>
 
-  <section class="service-banner">
-    <div class="left">
-      <h3>Client Based Service</h3>
-      <p>
-        We understand how important your business is to you, which is why we extensively
-        examine your requirements while taking into account the needs of your target
-        audience and the most recent market trends to develop.
-      </p>
+          <!-- Feature Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <h4 class="feature-card-title">Business focused</h4>
+            <p class="feature-card-desc">Products that solve real problems and drive growth.</p>
+          </div>
 
-      <button class="primary-btn">Start Project</button>
-    </div>
+          <!-- Feature Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <h4 class="feature-card-title">Long-term support</h4>
+            <p class="feature-card-desc">We stay involved well beyond the launch day.</p>
+          </div>
 
-    <div class="right-section">
-      <div class="list-wrapper">
-        <div class="moving-list" id="movingList">
-          <div class="item">Game Development</div>
-          <div class="item">Design</div>
-          <div class="item">Mobile App</div>
-          <div class="item">Custom Software</div>
-
-          <!-- duplicate for loop -->
-          <div class="item">Game Development</div>
-          <div class="item">Design</div>
-          <div class="item">Mobile App</div>
-          <div class="item">Custom Software</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="why-we-build">
-    <div class="wwb-container">
-
-      <!-- Left Image -->
-      <div class="wwb-left">
-        <img src="assests/container_goal_image.png" alt="Why We Build Illustration">
+  <!-- ========================== OUR STORY SECTION ============================= -->
+  <section class="our-story-section">
+    <div class="our-story-container">
+      <div class="our-story-left">
+        <h2 class="section-title">
+          Started with one idea — build things <span class="text-blue">worth using</span>.
+        </h2>
+        <p class="section-desc">
+          What began as small experiments turned into apps, websites and tools that people rely on daily. Today we're a focused team in India, shipping digital products for founders and businesses across the world.
+        </p>
+        
+        <div class="story-divider"></div>
+        
+        <div class="story-stats">
+          <div class="story-stat-item">
+            <span class="story-stat-number">5+</span>
+            <span class="story-stat-label">Years In</span>
+          </div>
+          <div class="story-stat-item">
+            <span class="story-stat-number">12</span>
+            <span class="story-stat-label">Team Members</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Right Text -->
-      <div class="wwb-right">
-        <h2>Why We Build</h2>
-        <p>
-          A compact team of designers and engineers who value simplicity and performance.
-          We solve complex problems with elegant code and player-first thinking.
-        </p>
+      <div class="our-story-right">
+        <div class="timeline-container">
+          
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot-container">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2020</span>
+              <h4 class="timeline-title">The beginning</h4>
+              <p class="timeline-desc">Started as a side project between friends frustrated with rushed, cluttered software.</p>
+            </div>
+          </div>
 
-        <p>
-          We partner with startups and studios to design, build, and scale digital experiences.
-          From rapid prototypes to production launches, we take ideas all the way to market.
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot-container">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2022</span>
+              <h4 class="timeline-title">First products</h4>
+              <p class="timeline-desc">Shipped our first apps and websites — small experiments that people actually loved using.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot-container">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2024</span>
+              <h4 class="timeline-title">Growing team</h4>
+              <p class="timeline-desc">Expanded to a focused team of designers and engineers building for clients across India.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot-container">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">Today</span>
+              <h4 class="timeline-title">50k+ users</h4>
+              <p class="timeline-desc">Serving founders, businesses and users across the world with reliable digital products.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== PRODUCT SHOWCASE SECTION ============================= -->
+  <section class="product-showcase-section">
+    <div class="showcase-container">
+      
+      <div class="showcase-header">
+        <div class="showcase-header-left">
+          <span class="showcase-badge-text">— Product Showcase</span>
+          <h2 class="showcase-title">Selected products we've built.</h2>
+        </div>
+        <div class="showcase-header-right">
+          <p class="showcase-desc-text">A mix of live products, active builds and things quietly on the way.</p>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        
+        <!-- Card 1: Nova Notes -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Mobile App</span>
+            <span class="status-badge status-live"><span class="status-dot"></span>Live</span>
+          </div>
+          <h3 class="product-title">Nova Notes</h3>
+          <p class="product-description">A distraction-free notes app with quick capture, tags and offline-first sync.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> Offline sync</li>
+            <li><i class="bi bi-check-lg"></i> Rich tags</li>
+            <li><i class="bi bi-check-lg"></i> Widgets</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Android · iOS</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2: Kirana Cloud -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Web Platform</span>
+            <span class="status-badge status-live"><span class="status-dot"></span>Live</span>
+          </div>
+          <h3 class="product-title">Kirana Cloud</h3>
+          <p class="product-description">Inventory and billing for neighbourhood retail stores, built for low-bandwidth India.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> POS billing</li>
+            <li><i class="bi bi-check-lg"></i> Stock alerts</li>
+            <li><i class="bi bi-check-lg"></i> GST reports</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Web</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3: Blockdrop -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Game</span>
+            <span class="status-badge status-live"><span class="status-dot"></span>Live</span>
+          </div>
+          <h3 class="product-title">Blockdrop</h3>
+          <p class="product-description">A calm, minimal puzzle game inspired by classic block mechanics with modern polish.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> 60 levels</li>
+            <li><i class="bi bi-check-lg"></i> No ads</li>
+            <li><i class="bi bi-check-lg"></i> Daily challenge</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Android · Web</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4: Siddhi Admin Kit -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Software</span>
+            <span class="status-badge status-dev"><span class="status-dot"></span>In Development</span>
+          </div>
+          <h3 class="product-title">Siddhi Admin Kit</h3>
+          <p class="product-description">A drop-in admin panel with auth, roles, tables and analytics for early-stage products.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> Auth & roles</li>
+            <li><i class="bi bi-check-lg"></i> Data tables</li>
+            <li><i class="bi bi-check-lg"></i> Audit logs</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Web · Desktop</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 5: Routely -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Mobile App</span>
+            <span class="status-badge status-soon"><span class="status-dot"></span>Coming Soon</span>
+          </div>
+          <h3 class="product-title">Routely</h3>
+          <p class="product-description">A daily habits and routine tracker with gentle reminders and a clean weekly view.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> Streaks</li>
+            <li><i class="bi bi-check-lg"></i> Reminders</li>
+            <li><i class="bi bi-check-lg"></i> Weekly view</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Android</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 6: Studio Site Engine -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <span class="product-category">Website</span>
+            <span class="status-badge status-live"><span class="status-dot"></span>Live</span>
+          </div>
+          <h3 class="product-title">Studio Site Engine</h3>
+          <p class="product-description">A fast, content-driven site framework we use to ship studio and portfolio sites in days.</p>
+          <ul class="product-features">
+            <li><i class="bi bi-check-lg"></i> CMS-ready</li>
+            <li><i class="bi bi-check-lg"></i> SEO built-in</li>
+            <li><i class="bi bi-check-lg"></i> Blazing fast</li>
+          </ul>
+          <div class="product-card-footer">
+            <span class="product-platform">Web</span>
+            <a href="#" class="product-details-link">Details <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== FEATURED APPLICATIONS SECTION ============================= -->
+  <section class="featured-apps-section">
+    <div class="apps-container">
+      
+      <div class="apps-header">
+        <div class="apps-header-left">
+          <span class="apps-badge-text">— Featured Applications</span>
+          <h2 class="apps-title">Mobile apps built with care.</h2>
+        </div>
+        <div class="apps-header-right">
+          <p class="apps-desc-text">Thoughtful Android and iOS apps designed for daily use — fast, offline-ready, and easy on the eyes.</p>
+        </div>
+      </div>
+
+      <div class="apps-grid">
+        
+        <!-- Card 1: Nova Notes -->
+        <div class="app-card card-green">
+          <div class="app-icon-wrapper">
+            <i class="bi bi-phone"></i>
+          </div>
+          <span class="app-card-category">Mobile app</span>
+          <h3 class="app-card-title">Nova Notes</h3>
+          <p class="app-card-description">Notes that sync offline and stay organized.</p>
+          <div class="app-tags">
+            <span class="app-tag">Android</span>
+            <span class="app-tag">iOS</span>
+            <span class="app-tag">Offline-first</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Routely -->
+        <div class="app-card card-blue">
+          <div class="app-icon-wrapper">
+            <i class="bi bi-phone"></i>
+          </div>
+          <span class="app-card-category">Mobile app</span>
+          <h3 class="app-card-title">Routely</h3>
+          <p class="app-card-description">Calm habit tracking without guilt or clutter.</p>
+          <div class="app-tags">
+            <span class="app-tag">Android</span>
+            <span class="app-tag">Widgets</span>
+            <span class="app-tag">Zero ads</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Spendwise -->
+        <div class="app-card card-orange">
+          <div class="app-icon-wrapper">
+            <i class="bi bi-phone"></i>
+          </div>
+          <span class="app-card-category">Mobile app</span>
+          <h3 class="app-card-title">Spendwise</h3>
+          <p class="app-card-description">Personal finance tracking made refreshingly simple.</p>
+          <div class="app-tags">
+            <span class="app-tag">Android</span>
+            <span class="app-tag">iOS</span>
+            <span class="app-tag">Local-only</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Focusbar -->
+        <div class="app-card card-purple">
+          <div class="app-icon-wrapper">
+            <i class="bi bi-phone"></i>
+          </div>
+          <span class="app-card-category">Mobile app</span>
+          <h3 class="app-card-title">Focusbar</h3>
+          <p class="app-card-description">A minimal timer and task list for deep work.</p>
+          <div class="app-tags">
+            <span class="app-tag">Android</span>
+            <span class="app-tag">Wear OS</span>
+            <span class="app-tag">Free</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== FEATURED WEBSITES SECTION ============================= -->
+  <section class="featured-websites-section">
+    <div class="websites-container">
+      
+      <div class="websites-header">
+        <div class="websites-header-left">
+          <span class="websites-badge-text">— Featured Websites</span>
+          <h2 class="websites-title">Websites that quietly do their job.</h2>
+        </div>
+      </div>
+
+      <div class="websites-grid">
+        
+        <!-- Website 1: Kirana Cloud -->
+        <div class="website-item">
+          <!-- Browser Mockup -->
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="browser-address"></div>
+            </div>
+            <div class="browser-body">
+              <span class="browser-badge">Live Site</span>
+              <h3 class="browser-site-title">Kirana Cloud</h3>
+              
+              <!-- Dashboard Wireframe Preview -->
+              <div class="wireframe-grid">
+                <div class="wireframe-left"></div>
+                <div class="wireframe-right"></div>
+                <div class="wireframe-bottom"></div>
+                <div class="wireframe-bottom"></div>
+                <div class="wireframe-bottom"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Website Info Below -->
+          <div class="website-info">
+            <span class="website-category">B2B SaaS Platform</span>
+            <h4 class="website-title-text">Kirana Cloud</h4>
+            <p class="website-description">Cut billing time by ~60% for small retailers across three states.</p>
+          </div>
+        </div>
+
+        <!-- Website 2: Studio Site Engine -->
+        <div class="website-item">
+          <!-- Browser Mockup -->
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="browser-address"></div>
+            </div>
+            <div class="browser-body">
+              <span class="browser-badge">Live Site</span>
+              <h3 class="browser-site-title">Studio Site Engine</h3>
+              
+              <!-- Dashboard Wireframe Preview -->
+              <div class="wireframe-grid">
+                <div class="wireframe-left"></div>
+                <div class="wireframe-right"></div>
+                <div class="wireframe-bottom"></div>
+                <div class="wireframe-bottom"></div>
+                <div class="wireframe-bottom"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Website Info Below -->
+          <div class="website-info">
+            <span class="website-category">Content Platform</span>
+            <h4 class="website-title-text">Studio Site Engine</h4>
+            <p class="website-description">Powers a dozen studio and portfolio sites at 100/100 Lighthouse scores.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== GAMES & CREATIVE SECTION ============================= -->
+  <section class="games-creative-section">
+    <div class="games-container">
+      
+      <!-- Left Column: Content & Tags -->
+      <div class="games-left-content">
+        <span class="games-badge-text">— Games & Creative</span>
+        <h2 class="games-title">Small games with real polish.</h2>
+        <p class="games-description">
+          We build casual and puzzle games that are calm, replayable and technically sharp. No dark patterns, no aggressive monetization — just games we'd play ourselves.
         </p>
+        <div class="games-tags">
+          <span class="games-tag">Puzzle</span>
+          <span class="games-tag">Casual</span>
+          <span class="games-tag">Offline</span>
+          <span class="games-tag">Cross-platform</span>
+        </div>
+      </div>
+
+      <!-- Right Column: 2x2 Cards Grid -->
+      <div class="games-grid-right">
+        
+        <!-- Game 1: Blockdrop -->
+        <div class="game-card game-blue">
+          <div class="game-icon">
+            <i class="bi bi-controller"></i>
+          </div>
+          <div class="game-card-info">
+            <span class="game-number">Game 01</span>
+            <h3 class="game-card-title">Blockdrop</h3>
+          </div>
+        </div>
+
+        <!-- Game 2: Tilepath -->
+        <div class="game-card game-yellow">
+          <div class="game-icon">
+            <i class="bi bi-controller"></i>
+          </div>
+          <div class="game-card-info">
+            <span class="game-number">Game 02</span>
+            <h3 class="game-card-title">Tilepath</h3>
+          </div>
+        </div>
+
+        <!-- Game 3: Loopscape -->
+        <div class="game-card game-blue">
+          <div class="game-icon">
+            <i class="bi bi-controller"></i>
+          </div>
+          <div class="game-card-info">
+            <span class="game-number">Game 03</span>
+            <h3 class="game-card-title">Loopscape</h3>
+          </div>
+        </div>
+
+        <!-- Game 4: Quiet Runs -->
+        <div class="game-card game-yellow">
+          <div class="game-icon">
+            <i class="bi bi-controller"></i>
+          </div>
+          <div class="game-card-info">
+            <span class="game-number">Game 04</span>
+            <h3 class="game-card-title">Quiet Runs</h3>
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
+
+  <!-- ========================== PROCESS SECTION ============================= -->
+  <section class="process-section">
+    <div class="process-container">
+      
+      <div class="process-header">
+        <span class="process-badge-text">— How We Work</span>
+        <h2 class="process-title">A calm, dependable process —<br>end to end.</h2>
+      </div>
+
+      <div class="process-grid">
+        
+        <!-- Step 1: Understand -->
+        <div class="process-card">
+          <span class="process-number">01</span>
+          <h3 class="process-card-title">Understand</h3>
+          <p class="process-card-desc">We start by understanding the idea, the user and the real problem behind it.</p>
+        </div>
+
+        <!-- Step 2: Plan -->
+        <div class="process-card">
+          <span class="process-number">02</span>
+          <h3 class="process-card-title">Plan</h3>
+          <p class="process-card-desc">Scope, priorities and a realistic roadmap — before any code is written.</p>
+        </div>
+
+        <!-- Step 3: Design -->
+        <div class="process-card">
+          <span class="process-number">03</span>
+          <h3 class="process-card-title">Design</h3>
+          <p class="process-card-desc">Clean, purposeful UI/UX with clear hierarchy and thoughtful details.</p>
+        </div>
+
+        <!-- Step 4: Develop -->
+        <div class="process-card">
+          <span class="process-number">04</span>
+          <h3 class="process-card-title">Develop</h3>
+          <p class="process-card-desc">Modern, maintainable engineering built for performance and scale.</p>
+        </div>
+
+        <!-- Step 5: Test & Refine -->
+        <div class="process-card">
+          <span class="process-number">05</span>
+          <h3 class="process-card-title">Test & Refine</h3>
+          <p class="process-card-desc">Careful QA, feedback loops and polish until it genuinely feels right.</p>
+        </div>
+
+        <!-- Step 6: Launch & Support -->
+        <div class="process-card">
+          <span class="process-number">06</span>
+          <h3 class="process-card-title">Launch & Support</h3>
+          <p class="process-card-desc">We ship, monitor and stay involved for the long run — not just launch day.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================== DARK STATS SECTION ============================= -->
+  <section class="dark-stats-section">
+    <div class="dark-stats-container">
+      
+      <!-- Stat 1 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">20+</span>
+        <span class="dark-stat-label">Products Built</span>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">12</span>
+        <span class="dark-stat-label">Apps Created</span>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">30+</span>
+        <span class="dark-stat-label">Websites Delivered</span>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">50k+</span>
+        <span class="dark-stat-label">Active Users</span>
+      </div>
+
+      <!-- Stat 5 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">5</span>
+        <span class="dark-stat-label">Years of Experience</span>
+      </div>
+
+      <!-- Stat 6 -->
+      <div class="dark-stat-item">
+        <span class="dark-stat-number">6</span>
+        <span class="dark-stat-label">Projects In Progress</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================== TECHNOLOGY & CAPABILITIES SECTION ============================= -->
+  <section class="tech-capabilities-section">
+    <div class="tech-container">
+      
+      <div class="tech-header">
+        <span class="tech-badge-text">— Technology & Capabilities</span>
+        <h2 class="tech-title">Modern tools, chosen carefully.</h2>
+        <p class="tech-description">
+          From mobile apps and responsive websites to APIs, databases, admin panels and scalable systems — we work across the stack, but only where it makes sense.
+        </p>
+      </div>
+
+      <div class="tech-tags-wrapper">
+        <span class="tech-tag">React & Next.js</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">React Native</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">REST & GraphQL APIs</span>
+        <span class="tech-tag">Firebase</span>
+        <span class="tech-tag">Supabase</span>
+        <span class="tech-tag">Tailwind CSS</span>
+        <span class="tech-tag">Figma</span>
+        <span class="tech-tag">Unity</span>
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">Admin panels</span>
+        <span class="tech-tag">Design systems</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================== COMPANY VALUES SECTION ============================= -->
+  <section class="company-values-section">
+    <div class="values-container">
+      
+      <div class="values-header">
+        <span class="values-badge-text">— Company Values</span>
+        <h2 class="values-title">What we hold ourselves to.</h2>
+      </div>
+
+      <div class="values-grid">
+        
+        <!-- Value 1: Quality -->
+        <div class="value-card">
+          <h3 class="value-card-title">Quality</h3>
+          <p class="value-card-desc">We ship work we would be happy to use ourselves.</p>
+        </div>
+
+        <!-- Value 2: Trust -->
+        <div class="value-card">
+          <h3 class="value-card-title">Trust</h3>
+          <p class="value-card-desc">Clear timelines, honest updates, no surprises.</p>
+        </div>
+
+        <!-- Value 3: Simplicity -->
+        <div class="value-card">
+          <h3 class="value-card-title">Simplicity</h3>
+          <p class="value-card-desc">We remove complexity instead of hiding it.</p>
+        </div>
+
+        <!-- Value 4: Innovation -->
+        <div class="value-card">
+          <h3 class="value-card-title">Innovation</h3>
+          <p class="value-card-desc">Modern tools, thoughtful ideas, measured risks.</p>
+        </div>
+
+        <!-- Value 5: Long-term Growth -->
+        <div class="value-card">
+          <h3 class="value-card-title">Long-term Growth</h3>
+          <p class="value-card-desc">We build for the second year, not just the launch.</p>
+        </div>
+
+        <!-- Value 6: Continuous Improvement -->
+        <div class="value-card">
+          <h3 class="value-card-title">Continuous Improvement</h3>
+          <p class="value-card-desc">Every project teaches us something we carry forward.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <section class="get-quote-form">
     <h3>Get Quote Now</h3>
 
@@ -217,83 +832,62 @@
   </section>
 
 
-  <footer class="footer">
-    <div class="footer-line"></div>
+  <footer class="footer-new">
+    <div class="footer-new-container">
+      
+      <!-- Top Row -->
+      <div class="footer-new-top">
+        
+        <!-- Left: Logo & Description -->
+        <div class="footer-new-col brand-col">
+          <div class="footer-brand-logo">
+            <span class="brand-s-logo">S</span>
+            <span class="brand-text-logo">Siddhi Software Company</span>
+          </div>
+          <p class="footer-brand-desc">
+            A product studio building apps, websites, games and software worth using.
+          </p>
+        </div>
 
-    <div class="footer-content">
-      <div class="footer-left">
-        <h2>
-          Let’s build something extraordinary together — your next app or game
-          starts here.
-        </h2>
-        <p class="copyright">
-          ©2025 Siddhi Software Company All Rights Reserved.
-        </p>
+        <!-- Middle: Company Links -->
+        <div class="footer-new-col links-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-col-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">What we build</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Process</a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Contact info -->
+        <div class="footer-new-col contact-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-contact-info">
+            <li><a href="mailto:hello@siddhisoftware.com">hello@siddhisoftware.com</a></li>
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li>Ahmedabad, India</li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="footer-right">
-        <div class="footer-info">
-          <h3>Get In Touch</h3>
-          <p>hr@siddhisoftwarescompany.com</p>
-          <p>+91 9521005427</p>
-          <p>Rajasthan, India</p>
-        </div>
+      <!-- Divider line -->
+      <div class="footer-new-divider"></div>
 
-        <div class="footer-links">
+      <!-- Bottom Row -->
+      <div class="footer-new-bottom">
+        <p class="footer-copyright">
+          © 2026 Siddhi Software Company. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
           <a href="#">Privacy</a>
-          <a href="#">Policy</a>
-        </div>
-        <!-- Navigation → Mobile Only -->
-        <div class="footer-section mobile-nav">
-          <h3>Navigation</h3>
-          <p>Our Work</p>
-          <p>About Us</p>
-          <p>Blog</p>
+          <a href="#">Terms</a>
         </div>
       </div>
 
     </div>
-  </footer>
-
-  <script>
-    const list = document.getElementById("movingList");
-    const items = document.querySelectorAll(".item");
-
-    let index = 0;
-    let h = items[0].offsetHeight;
-
-    // REAL items = half list (kyunki duplicate kiya hai)
-    let realCount = items.length / 2;
-
-    // Total scrollable length = full item count
-    let totalItems = items.length;
-
-    function move() {
-      // normal move
-      list.style.transition = "transform 0.25s linear";
-      list.style.transform = `translateY(-${index * h}px)`;
-
-      // highlight active
-      items.forEach(i => i.classList.remove("highlight"));
-      items[index].classList.add("highlight");
-
-      index++;
-
-      // NEW FIX:
-      // Reset only when we complete full duplicate list
-      if (index === totalItems) {
-        setTimeout(() => {
-          list.style.transition = "none";
-          list.style.transform = "translateY(0px)";
-          index = 0;
-        }, 260);
-      }
-    }
-
-    setInterval(move, 1000);
-
-
-
+  </footer>  <script>
     window.addEventListener("scroll", function () {
       const nav = document.getElementById("navbar");
 
