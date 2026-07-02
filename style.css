@@ -103,10 +103,24 @@ a {
   align-items: center;
 }
 
+.brand-s-logo {
+  background: #0055d4;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.65rem;
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
