@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 400" fill="none">
+  <!-- S mark: two offset rounded bars -->
+  <g>
+    <path d="M110 70 h180 a40 40 0 0 1 40 40 v40 a40 40 0 0 1 -40 40 h-180 a40 40 0 0 1 -40 -40 v-40 a40 40 0 0 1 40 -40 z" fill="#2563EB"/>
+    <path d="M150 210 h180 a40 40 0 0 1 40 40 v40 a40 40 0 0 1 -40 40 h-180 a40 40 0 0 1 -40 -40 v-40 a40 40 0 0 1 40 -40 z" fill="#2563EB"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="450" y="290" font-family="Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="260" fill="#0B1B36" letter-spacing="-8">Siddhi</text>
+</svg>

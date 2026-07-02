@@ -103,41 +103,25 @@ a {
   align-items: center;
 }
 
-.brand-s-logo {
-  background: #0055d4;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 1.25rem;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.brand-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+#navbar:not(.scrolled) .brand-logo-img {
+  filter: brightness(0) invert(1);
+}
+
+#navbar.scrolled .brand-logo-img {
+  filter: none;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-}
-
-.logo-bold {
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.logo-light {
-  font-weight: 300;
-  color: #64748b;
-}
-
-#navbar.scrolled .logo-bold {
-  color: #0f172a;
+  text-decoration: none;
 }
 
 .nav-links {
