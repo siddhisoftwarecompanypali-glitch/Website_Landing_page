@@ -104,18 +104,9 @@ a {
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 52px;
   width: auto;
   display: block;
-  transition: filter 0.3s ease;
-}
-
-#navbar:not(.scrolled) .brand-logo-img {
-  filter: brightness(0) invert(1);
-}
-
-#navbar.scrolled .brand-logo-img {
-  filter: none;
 }
 
 .logo {
