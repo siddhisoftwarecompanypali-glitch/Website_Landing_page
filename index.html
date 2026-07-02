@@ -32,10 +32,8 @@
 
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#what-we-build">What we build</a>
         <a href="#products">Products</a>
         <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
       </div>
 
       <a href="#contact" class="nav-btn">Start a project</a>
@@ -44,10 +42,8 @@
   <!-- Mobile Dropdown Menu -->
   <div id="mobileMenu" aria-hidden="true">
     <a href="#about">About</a>
-    <a href="#what-we-build">What we build</a>
     <a href="#products">Products</a>
     <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
     <a href="#contact" class="mob-btn">Start a project</a>
   </div>
 
@@ -897,6 +893,32 @@
         nav.classList.remove("scrolled");
       }
     });
+
+    // Active Link Scroll Highlighting
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a, #mobileMenu a");
+
+    function highlightActiveSection() {
+      const scrollPos = window.scrollY + 180;
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${id}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", highlightActiveSection);
+    window.addEventListener("DOMContentLoaded", highlightActiveSection);
 
 
     document.addEventListener('DOMContentLoaded', () => {

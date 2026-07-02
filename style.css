@@ -136,11 +136,16 @@ a {
   font-size: 0.95rem;
   font-weight: 500;
   color: #475569;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #0055d4;
+}
+
+.nav-links a.active {
+  color: #0055d4;
+  font-weight: 700;
 }
 
 #navbar.scrolled .nav-links a {
@@ -149,6 +154,11 @@ a {
 
 #navbar.scrolled .nav-links a:hover {
   color: #0055d4;
+}
+
+#navbar.scrolled .nav-links a.active {
+  color: #0055d4;
+  font-weight: 700;
 }
 
 /* Nav Button */
@@ -2394,6 +2404,10 @@ a {
     opacity: 0;
     transition: opacity 0.3s ease 0.15s;
     padding: 0.5rem 2rem;
+  }
+
+  #mobileMenu a.active {
+    color: #0055d4;
   }
 
   #mobileMenu.open a {
