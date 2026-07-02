@@ -794,9 +794,83 @@ a {
   margin-bottom: 18px;
 }
 
-/* quote form */
+/* quote form styles */
 .get-quote-form {
-  display: none;
+  display: block;
+  width: 90%;
+  max-width: 680px;
+  margin: 6rem auto;
+  padding: 4rem 3.5rem;
+  background: #090e1a;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.get-quote-form h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.get-quote-form p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.get-quote-form form input,
+.get-quote-form form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.85rem 1.15rem;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.get-quote-form form input::placeholder,
+.get-quote-form form textarea::placeholder {
+  color: #64748b;
+}
+
+.get-quote-form form input:focus,
+.get-quote-form form textarea:focus {
+  border-color: #0055d4;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 85, 212, 0.15);
+}
+
+.form-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #0055d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 20px -5px rgba(0, 85, 212, 0.2);
+}
+
+.form-btn:hover {
+  background: #0044b3;
+  transform: translateY(-1px);
 }
 
 .footer {
