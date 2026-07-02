@@ -2366,7 +2366,7 @@ a {
 .modal-container {
   background: #F0F4F7;
   width: 92%;
-  max-width: 1060px;
+  max-width: 1180px;
   max-height: 90vh;
   border-radius: 28px;
   overflow-y: auto;
@@ -2403,8 +2403,8 @@ a {
 
 .modal-content-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 4.5rem;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3.5rem;
   align-items: center;
   width: 100%;
 }
