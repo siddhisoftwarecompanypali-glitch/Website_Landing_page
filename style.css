@@ -2564,6 +2564,8 @@ a {
   color: #334155;
   text-decoration: none;
   transition: color 0.2s ease;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .modal-contact-list a:hover {
@@ -3080,6 +3082,7 @@ a {
   }
 
   .games-grid-right {
+    grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
