@@ -860,8 +860,8 @@
           © 2026 Siddhi Software Company. All rights reserved.
         </p>
         <div class="footer-bottom-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <a href="#" id="openPrivacyBtn">Privacy</a>
+          <a href="#" id="openTermsBtn">Terms</a>
         </div>
       </div>
 
@@ -905,12 +905,6 @@
             </li>
           </ul>
 
-          <div class="modal-socials">
-            <a href="#" class="social-circle"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="social-circle"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-circle"><i class="bi bi-github"></i></a>
-          </div>
         </div>
 
         <!-- Right Side: Form Card -->
@@ -975,6 +969,79 @@
 
     </div>
   </div>
+
+  <!-- ========================== PRIVACY POLICY MODAL ============================= -->
+  <div id="privacyModal" class="project-modal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-container legal-modal-container">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="legal-modal-content">
+        <h2 class="legal-modal-title">Privacy Policy</h2>
+        <p class="legal-modal-date">Last Updated: July 2026</p>
+        
+        <div class="legal-text-body">
+          <p>At Siddhi Software Company, we value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with our website or submit inquiries.</p>
+          
+          <h3>1. Information We Collect</h3>
+          <p>We collect personal information that you voluntarily provide to us when you fill out our project inquiry forms. This includes:</p>
+          <ul>
+            <li>Your name, email address, and phone number.</li>
+            <li>Details regarding your project requirements, budget, and timeline.</li>
+          </ul>
+
+          <h3>2. How We Use Your Information</h3>
+          <p>We use the information we collect to understand your project needs and to communicate with you about our services. Specifically, we use your data to:</p>
+          <ul>
+            <li>Respond to your requests, send quotes, and schedule introductory calls.</li>
+            <li>Improve our customer service, offerings, and user experience.</li>
+            <li>We do not sell, trade, rent, or lease your personal information to third parties.</li>
+          </ul>
+
+          <h3>3. Security of Your Data</h3>
+          <p>We implement appropriate physical, technical, and organizational security measures to protect your personal information against unauthorized access, disclosure, alteration, or destruction. However, no transmission over the internet can be guaranteed 100% secure.</p>
+
+          <h3>4. Contact Us</h3>
+          <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:hello@siddhisoftwarecompany.com">hello@siddhisoftwarecompany.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================== TERMS OF SERVICE MODAL ============================= -->
+  <div id="termsModal" class="project-modal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-container legal-modal-container">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="legal-modal-content">
+        <h2 class="legal-modal-title">Terms of Service</h2>
+        <p class="legal-modal-date">Last Updated: July 2026</p>
+        
+        <div class="legal-text-body">
+          <p>Welcome to Siddhi Software Company. By accessing or using our website, you agree to comply with and be bound by the following Terms of Service. Please review these terms carefully.</p>
+          
+          <h3>1. Services Offered</h3>
+          <p>Siddhi Software Company provides design, development, and consulting services for mobile applications, websites, games, and custom software. All projects are subject to separate formal contracts outlining detailed deliverables, milestones, and payment terms.</p>
+
+          <h3>2. Intellectual Property Rights</h3>
+          <p>Unless otherwise agreed in a separate written contract:</p>
+          <ul>
+            <li>All custom source code, assets, and deliverables designed exclusively for a client belong to that client upon final payment in full.</li>
+            <li>Siddhi Software Company retains rights to reusable core frameworks, developer libraries, and general software architecture components developed prior to or during the project.</li>
+          </ul>
+
+          <h3>3. Website Use</h3>
+          <p>The content of this website is for your general information and promotional use only. It is subject to change without notice. Unauthorized use of this website may give rise to a claim for damages or be a criminal offense.</p>
+
+          <h3>4. Liability Limitation</h3>
+          <p>In no event shall Siddhi Software Company be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use of our website or services.</p>
+
+          <h3>5. Contact Details</h3>
+          <p>For questions regarding these Terms, please contact us at <a href="mailto:hello@siddhisoftwarecompany.com">hello@siddhisoftwarecompany.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script>
     window.addEventListener("scroll", function () {
@@ -1087,37 +1154,45 @@
       });
     });
 
-    // Modal toggle script
-    const modal = document.getElementById('projectModal');
-    const openModalBtns = document.querySelectorAll('.nav-btn, .mob-btn, .btn-hero-primary');
-    const closeModalBtn = modal.querySelector('.modal-close');
-    const modalOverlay = modal.querySelector('.modal-overlay');
+    // Generic Modal setup
+    function setupModal(modalId, triggerSelector) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      const triggers = document.querySelectorAll(triggerSelector);
+      const closeBtn = modal.querySelector('.modal-close');
+      const overlay = modal.querySelector('.modal-overlay');
 
-    function openModal(e) {
-      e.preventDefault();
-      modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    openModalBtns.forEach(btn => {
-      btn.addEventListener('click', openModal);
-    });
-
-    closeModalBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('show')) {
-        closeModal();
+      function open() {
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
       }
-    });
+
+      function close() {
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      triggers.forEach(trigger => trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        open();
+      }));
+
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      if (overlay) overlay.addEventListener('click', close);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+          close();
+        }
+      });
+    }
+
+    // Initialize all modals
+    setupModal('projectModal', '.nav-btn, .mob-btn, .btn-hero-primary');
+    setupModal('privacyModal', '#openPrivacyBtn');
+    setupModal('termsModal', '#openTermsBtn');
 
     const projectForm = document.getElementById('startProjectForm');
     if (projectForm) {
@@ -1125,7 +1200,10 @@
         e.preventDefault();
         alert('Thank you! Your message has been sent successfully.');
         projectForm.reset();
-        closeModal();
+        const projectModal = document.getElementById('projectModal');
+        projectModal.classList.remove('show');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
       });
 
       // Select placeholder color helper

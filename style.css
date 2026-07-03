@@ -3433,3 +3433,65 @@ a {
     display: none !important;
   }
 }
+
+/* ----------------------- LEGAL MODALS --------------------------------*/
+.legal-modal-container {
+  max-width: 800px !important;
+  padding: 3.5rem 3rem !important;
+}
+
+.legal-modal-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.legal-modal-date {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.legal-text-body {
+  font-family: "Inter", sans-serif;
+  color: #334155;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.legal-text-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-text-body p {
+  margin-bottom: 1.25rem;
+}
+
+.legal-text-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.legal-text-body li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-text-body a {
+  color: #0055d4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-text-body a:hover {
+  text-decoration: underline;
+}
