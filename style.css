@@ -39,6 +39,10 @@ html {
   --shadow-hover: rgba(0, 85, 212, 0.15);
 }
 
+[data-theme="dark"] .brand-logo-img {
+  filter: brightness(0) invert(1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -226,7 +230,7 @@ a {
 
 /* ----------------------- HERO SECTION --------------------------------*/
 .hero-wrapper-block {
-  background: #ffffff;
+  background: var(--bg-primary);
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -268,9 +272,9 @@ a {
 /* Badge */
 .hero-badge {
   display: inline-block;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  color: #1d4ed8;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: #0055d4;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
@@ -278,7 +282,7 @@ a {
   padding: 0.4rem 1rem;
   border-radius: 9999px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(29, 78, 216, 0.04);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 /* Main title */
@@ -287,7 +291,7 @@ a {
   font-weight: 800;
   font-size: 3.5rem;
   line-height: 1.1;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
 }
@@ -301,7 +305,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #4b5563;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-weight: 400;
   max-width: 500px;
@@ -400,14 +404,14 @@ a {
   position: absolute;
   bottom: 24px;
   left: -32px;
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 16px;
   padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.12);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 15px 30px -10px var(--shadow-color);
+  border: 1px solid var(--border-color);
   animation: floatBadge 4s ease-in-out infinite;
 }
 
@@ -423,10 +427,11 @@ a {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: #eff6ff;
+  background: var(--bg-secondary);
   border-radius: 12px;
   color: #0055d4;
   font-size: 1.2rem;
+  border: 1px solid var(--border-color);
 }
 
 .badge-text-box {
@@ -440,7 +445,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .badge-sub {
@@ -488,7 +493,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--text-secondary);
 }
 
 
@@ -1009,7 +1014,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
@@ -1018,7 +1023,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   font-weight: 400;
 }
@@ -1257,7 +1262,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -1265,7 +1270,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   line-height: 1.55;
-  color: #4b5563;
+  color: var(--text-secondary);
 }/* ----------------------- PRODUCT SHOWCASE SECTION --------------------------------*/
 .product-showcase-section {
   background: var(--bg-tertiary);
@@ -1324,7 +1329,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-secondary);
   font-weight: 400;
   margin: 0;
 }
@@ -1425,7 +1430,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
@@ -1434,7 +1439,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #475569;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -1451,7 +1456,7 @@ a {
 .product-features li {
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
-  color: #334155;
+  color: var(--text-secondary);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -1469,7 +1474,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--border-color);
   padding-top: 1.25rem;
   margin-top: 1.5rem;
 }
@@ -1639,7 +1644,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
@@ -1648,7 +1653,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #475569;
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -1660,14 +1665,15 @@ a {
 }
 
 .app-tag {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 0.35rem 0.75rem;
   border-radius: 9999px;
   font-family: "Inter", sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #475569;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px var(--shadow-color);
 }
 
 /* ----------------------- FEATURED WEBSITES SECTION --------------------------------*/
@@ -1912,7 +1918,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-secondary);
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -2004,7 +2010,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
@@ -2178,7 +2184,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
@@ -2187,7 +2193,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-secondary);
   font-weight: 400;
   margin: 0;
 }
@@ -2200,20 +2206,20 @@ a {
 }
 
 .tech-tag {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   padding: 0.65rem 1.25rem;
   border-radius: 9999px;
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #1e293b;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  color: var(--text-primary);
+  box-shadow: 0 1px 2px var(--shadow-color);
   transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
-  border-color: #94a3b8;
+  border-color: rgba(0, 85, 212, 0.35);
   transform: translateY(-1px);
 }
 
@@ -2316,11 +2322,11 @@ a {
 
 /* ----------------------- NEW FOOTER SECTION --------------------------------*/
 .footer-new {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 5rem 2rem 2rem 2rem;
   position: relative;
   z-index: 10;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-new-container {
@@ -2369,14 +2375,14 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .footer-brand-desc {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #64748b;
+  color: var(--text-muted);
   max-width: 340px;
 }
 
@@ -2384,7 +2390,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
@@ -2405,7 +2411,7 @@ a {
 .footer-contact-info li {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
-  color: #475569;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -2417,7 +2423,7 @@ a {
 
 .footer-new-divider {
   height: 1px;
-  background: #f1f5f9;
+  background: var(--border-color);
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -2486,7 +2492,7 @@ a {
 }
 
 .modal-container {
-  background: #F0F4F7;
+  background: var(--bg-tertiary);
   width: 92%;
   max-width: 1180px;
   max-height: 90vh;
@@ -2498,6 +2504,7 @@ a {
   transform: scale(0.95);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   padding: 4rem 3.5rem;
+  border: 1px solid var(--border-color);
 }
 
 .project-modal.show .modal-container {
@@ -2512,7 +2519,7 @@ a {
   border: none;
   font-size: 2.25rem;
   font-weight: 300;
-  color: #64748b;
+  color: var(--text-muted);
   cursor: pointer;
   line-height: 1;
   transition: color 0.2s ease;
@@ -2520,7 +2527,7 @@ a {
 }
 
 .modal-close:hover {
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .modal-content-grid {
@@ -2556,7 +2563,7 @@ a {
   font-weight: 800;
   font-size: 3rem;
   line-height: 1.15;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
@@ -2569,7 +2576,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.55;
-  color: #475569;
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
 }
 
@@ -2591,16 +2598,17 @@ a {
 .contact-icon-circle {
   width: 40px;
   height: 40px;
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  border: 1px solid var(--border-color);
 }
 
 .contact-icon-circle i {
-  color: #0f172a;
+  color: var(--text-primary);
   font-size: 1.1rem;
 }
 
@@ -2609,7 +2617,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
   word-break: break-all;
@@ -2633,7 +2641,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #475569;
+  color: var(--text-secondary);
   text-decoration: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
   transition: all 0.2s ease;
@@ -2651,19 +2659,20 @@ a {
 }
 
 .modal-form-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 24px;
   padding: 3rem 2.5rem;
   width: 100%;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.02), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 25px -5px var(--shadow-color);
   text-align: left;
+  border: 1px solid var(--border-color);
 }
 
 .form-card-title {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
 }
@@ -2671,7 +2680,7 @@ a {
 .form-card-subtitle {
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
@@ -2687,7 +2696,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
@@ -2697,13 +2706,13 @@ a {
   width: 100%;
   height: 48px;
   padding: 0 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
-  color: #0f172a;
+  color: var(--text-primary);
   outline: none;
-  background: #ffffff;
+  background: var(--bg-primary);
   transition: all 0.2s ease;
 }
 
@@ -2721,13 +2730,13 @@ a {
 .form-group textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
-  color: #0f172a;
+  color: var(--text-primary);
   outline: none;
-  background: #ffffff;
+  background: var(--bg-primary);
   transition: all 0.2s ease;
 }
 
@@ -2832,7 +2841,7 @@ a {
     padding: 0;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--bg-mobile-menu);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2845,7 +2854,7 @@ a {
   }
 
   #mobileMenu a {
-    color: #0f172a;
+    color: var(--text-primary);
     font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -3518,7 +3527,7 @@ a {
 
 .legal-text-body {
   font-family: "Inter", sans-serif;
-  color: #334155;
+  color: var(--text-secondary);
   line-height: 1.65;
   font-size: 0.95rem;
   text-align: left;
