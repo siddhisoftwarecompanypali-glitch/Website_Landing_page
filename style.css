@@ -2148,7 +2148,7 @@ a {
   letter-spacing: 0.05em;
 }/* ----------------------- TECHNOLOGY & CAPABILITIES SECTION --------------------------------*/
 .tech-capabilities-section {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
