@@ -5,6 +5,40 @@ html {
   scroll-padding-top: 100px;
 }
 
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #F0F4F7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --bg-navbar: rgba(255, 255, 255, 0.95);
+  --bg-mobile-menu: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(15, 23, 42, 0.05);
+  --shadow-hover: rgba(0, 85, 212, 0.08);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-primary: #090e1a;
+  --bg-secondary: #04050a;
+  --bg-tertiary: #0c1322;
+  --bg-card: #111b2d;
+  --bg-card-hover: #16243d;
+  --bg-navbar: rgba(9, 14, 26, 0.95);
+  --bg-mobile-menu: #090e1a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --shadow-hover: rgba(0, 85, 212, 0.15);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +48,10 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #04050a;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bg-glow-right {
@@ -86,11 +122,11 @@ a {
 }
 
 #navbar.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg-navbar);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 4px 30px var(--shadow-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 10px 2rem;
 }
 
@@ -124,7 +160,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #475569;
+  color: var(--text-secondary);
   transition: all 0.2s ease;
 }
 
@@ -138,7 +174,7 @@ a {
 }
 
 #navbar.scrolled .nav-links a {
-  color: #334155;
+  color: var(--text-secondary);
 }
 
 #navbar.scrolled .nav-links a:hover {
@@ -155,28 +191,28 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   padding: 0.65rem 1.5rem;
-  background: #0f172a;
+  background: var(--text-primary);
   border-radius: 9999px;
   font-size: 0.9rem;
   transition: all 0.2s ease;
-  color: #ffffff;
+  color: var(--bg-primary);
   border: 1px solid transparent;
   display: inline-block;
   text-align: center;
 }
 
 .nav-btn:hover {
-  background: #1e293b;
+  background: var(--text-secondary);
   transform: translateY(-1px);
 }
 
 #navbar.scrolled .nav-btn {
-  background: #0f172a;
-  color: #ffffff;
+  background: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 #navbar.scrolled .nav-btn:hover {
-  background: #1e293b;
+  background: var(--text-secondary);
 }
 
 /* Menu Icon mobile */
@@ -1004,7 +1040,7 @@ a {
 
 /* ----------------------- ABOUT FEATURES SECTION --------------------------------*/
 .about-features-section {
-  background: #F0F4F7;
+  background: var(--bg-tertiary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1039,10 +1075,11 @@ a {
 }
 
 .feature-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(241, 245, 249, 0.8);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--shadow-color), 0 10px 15px -3px var(--shadow-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -1051,8 +1088,10 @@ a {
 }
 
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  transform: translateY(-8px);
+  border-color: rgba(0, 85, 212, 0.35);
+  box-shadow: 0 20px 40px var(--shadow-hover), 0 0 0 1px rgba(0, 85, 212, 0.1);
+  background: var(--bg-card-hover);
 }
 
 .feature-icon-box {
@@ -1061,18 +1100,19 @@ a {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: #eff6ff;
+  background: var(--bg-secondary);
   border-radius: 12px;
   color: #0055d4;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
 }
 
 .feature-card-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -1080,16 +1120,16 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #64748b;
+  color: var(--text-secondary);
 }
 
 /* ----------------------- OUR STORY SECTION --------------------------------*/
 .our-story-section {
-  background: #ffffff;
+  background: var(--bg-secondary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .our-story-container {
@@ -1113,7 +1153,7 @@ a {
 .story-divider {
   width: 100%;
   height: 1px;
-  background: #e2e8f0;
+  background: var(--border-color);
   margin: 2rem 0;
 }
 
@@ -1228,7 +1268,7 @@ a {
   color: #4b5563;
 }/* ----------------------- PRODUCT SHOWCASE SECTION --------------------------------*/
 .product-showcase-section {
-  background: #F0F4F7;
+  background: var(--bg-tertiary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1260,7 +1300,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -1271,14 +1311,13 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .showcase-header-right {
   display: flex;
   align-items: flex-end;
-  text-align: left;
 }
 
 .showcase-desc-text {
@@ -1298,10 +1337,11 @@ a {
 }
 
 .product-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 2.25rem 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(241, 245, 249, 0.8);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--shadow-color), 0 10px 15px -3px var(--shadow-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -1311,8 +1351,10 @@ a {
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  transform: translateY(-8px);
+  border-color: rgba(0, 85, 212, 0.35);
+  box-shadow: 0 20px 40px var(--shadow-hover), 0 0 0 1px rgba(0, 85, 212, 0.1);
+  background: var(--bg-card-hover);
 }
 
 .product-card-header {
@@ -1455,7 +1497,7 @@ a {
 }
 /* ----------------------- FEATURED APPLICATIONS SECTION --------------------------------*/
 .featured-apps-section {
-  background: #ffffff;
+  background: var(--bg-secondary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1487,7 +1529,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -1498,7 +1540,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
@@ -1512,7 +1554,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--text-secondary);
   font-weight: 400;
   margin: 0;
 }
@@ -1533,12 +1575,12 @@ a {
   text-align: left;
   min-height: 340px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-color);
 }
 
 .app-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--shadow-hover);
 }
 
 /* Card Themes */
@@ -1630,7 +1672,7 @@ a {
 
 /* ----------------------- FEATURED WEBSITES SECTION --------------------------------*/
 .featured-websites-section {
-  background: #F0F4F7;
+  background: var(--bg-primary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1652,7 +1694,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -1664,7 +1706,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
@@ -1682,9 +1724,10 @@ a {
 }
 
 .browser-mockup {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(241, 245, 249, 0.8);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -1692,17 +1735,19 @@ a {
 }
 
 .browser-mockup:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  transform: translateY(-8px);
+  border-color: rgba(0, 85, 212, 0.35);
+  box-shadow: 0 20px 40px var(--shadow-hover);
+  background: var(--bg-card-hover);
 }
 
 .browser-header {
-  background: #f8fafc;
+  background: var(--bg-secondary);
   padding: 0.85rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .browser-dots {
@@ -1724,7 +1769,7 @@ a {
 
 .browser-address {
   height: 18px;
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 4px;
   flex: 1;
 }
@@ -1741,7 +1786,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
@@ -1751,7 +1796,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -1764,21 +1809,24 @@ a {
 }
 
 .wireframe-left {
-  background: #f1f5f9;
+  background: var(--bg-secondary);
   border-radius: 12px;
   height: 90px;
+  border: 1px solid var(--border-color);
 }
 
 .wireframe-right {
-  background: #f1f5f9;
+  background: var(--bg-secondary);
   border-radius: 12px;
   height: 90px;
+  border: 1px solid var(--border-color);
 }
 
 .wireframe-bottom {
-  background: #f8fafc;
+  background: var(--bg-tertiary);
   border-radius: 8px;
   height: 40px;
+  border: 1px solid var(--border-color);
 }
 
 .website-info {
@@ -1792,7 +1840,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.35rem;
@@ -1802,7 +1850,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
@@ -1811,13 +1859,13 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #475569;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 /* ----------------------- GAMES & CREATIVE SECTION --------------------------------*/
 .games-creative-section {
-  background: #ffffff;
+  background: var(--bg-secondary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1843,7 +1891,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -1855,7 +1903,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
 }
@@ -1901,12 +1949,12 @@ a {
   align-items: flex-start;
   height: 240px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-color);
 }
 
 .game-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--shadow-hover);
 }
 
 .game-blue {
@@ -1962,7 +2010,7 @@ a {
 
 /* ----------------------- PROCESS SECTION --------------------------------*/
 .process-section {
-  background: #F0F4F7;
+  background: var(--bg-tertiary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -1984,7 +2032,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -1996,7 +2044,7 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.25;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
@@ -2008,10 +2056,11 @@ a {
 }
 
 .process-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 2.5rem 2.25rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(241, 245, 249, 0.8);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--shadow-color), 0 10px 15px -3px var(--shadow-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -2021,8 +2070,10 @@ a {
 }
 
 .process-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  border-color: rgba(0, 85, 212, 0.35);
+  box-shadow: 0 20px 40px var(--shadow-hover), 0 0 0 1px rgba(0, 85, 212, 0.1);
+  background: var(--bg-card-hover);
 }
 
 .process-number {
@@ -2037,7 +2088,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
 }
@@ -2046,7 +2097,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #475569;
+  color: var(--text-secondary);
   margin: 0;
 }
 /* ----------------------- DARK STATS SECTION --------------------------------*/
@@ -2168,7 +2219,7 @@ a {
 
 /* ----------------------- COMPANY VALUES SECTION --------------------------------*/
 .company-values-section {
-  background: #F0F4F7;
+  background: var(--bg-tertiary);
   padding: 8rem 2rem;
   position: relative;
   z-index: 10;
@@ -2190,7 +2241,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #64748b;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -2202,32 +2253,40 @@ a {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 1.2;
-  color: #0f172a;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(241, 245, 249, 0.8);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px var(--shadow-color), 0 10px 15px -3px var(--shadow-color);
 }
 
 .value-card {
   padding: 3.5rem 3rem;
-  border-right: 1px solid #f1f5f9;
-  border-bottom: 1px solid #f1f5f9;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  transition: background-color 0.2s ease;
+  background: var(--bg-card);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .value-card:hover {
-  background-color: #fafbfc;
+  background-color: var(--bg-card-hover);
+  transform: scale(1.025);
+  z-index: 5;
+  border-radius: 12px;
+  border-color: rgba(0, 85, 212, 0.25);
+  box-shadow: 0 15px 30px var(--shadow-hover);
 }
 
 .value-card:nth-child(3n) {
@@ -2242,7 +2301,7 @@ a {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
 }
@@ -2251,7 +2310,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  color: #475569;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -3494,4 +3553,163 @@ a {
 
 .legal-text-body a:hover {
   text-decoration: underline;
+}
+
+/* ----------------------- EXTRA DESIGN ADDITIONS --------------------------------*/
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--bg-tertiary);
+  transform: rotate(15deg);
+}
+
+/* Floating WhatsApp Widget */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #25d366;
+  opacity: 0.5;
+  z-index: -1;
+  animation: pulse-wave 2s infinite;
+}
+
+@keyframes pulse-wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Dark Theme Overrides for Pastel Cards */
+[data-theme="dark"] .card-green {
+  background: rgba(30, 70, 32, 0.2) !important;
+  border-color: rgba(74, 222, 128, 0.2) !important;
+}
+[data-theme="dark"] .card-green .app-icon-wrapper i {
+  color: #4ade80 !important;
+}
+[data-theme="dark"] .card-green .app-title-text,
+[data-theme="dark"] .card-green .app-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .card-blue {
+  background: rgba(26, 54, 93, 0.2) !important;
+  border-color: rgba(96, 165, 250, 0.2) !important;
+}
+[data-theme="dark"] .card-blue .app-icon-wrapper i {
+  color: #60a5fa !important;
+}
+[data-theme="dark"] .card-blue .app-title-text,
+[data-theme="dark"] .card-blue .app-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .card-orange {
+  background: rgba(124, 45, 18, 0.2) !important;
+  border-color: rgba(251, 146, 60, 0.2) !important;
+}
+[data-theme="dark"] .card-orange .app-icon-wrapper i {
+  color: #fb923c !important;
+}
+[data-theme="dark"] .card-orange .app-title-text,
+[data-theme="dark"] .card-orange .app-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .card-purple {
+  background: rgba(76, 29, 149, 0.2) !important;
+  border-color: rgba(192, 132, 252, 0.2) !important;
+}
+[data-theme="dark"] .card-purple .app-icon-wrapper i {
+  color: #c084fc !important;
+}
+[data-theme="dark"] .card-purple .app-title-text,
+[data-theme="dark"] .card-purple .app-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .app-icon-wrapper {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .game-blue {
+  background: rgba(30, 58, 138, 0.2) !important;
+  border-color: rgba(96, 165, 250, 0.2) !important;
+}
+[data-theme="dark"] .game-blue .game-icon i {
+  color: #60a5fa !important;
+}
+[data-theme="dark"] .game-blue .game-card-title,
+[data-theme="dark"] .game-blue .game-card-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .game-yellow {
+  background: rgba(120, 53, 15, 0.2) !important;
+  border-color: rgba(251, 191, 36, 0.2) !important;
+}
+[data-theme="dark"] .game-yellow .game-icon i {
+  color: #fbbf24 !important;
+}
+[data-theme="dark"] .game-yellow .game-card-title,
+[data-theme="dark"] .game-yellow .game-card-desc {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .game-icon {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
