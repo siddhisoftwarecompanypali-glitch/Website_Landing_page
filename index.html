@@ -213,7 +213,7 @@
   <!-- ==========================NAVIGATION BAR============================= -->
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#about" class="logo" aria-label="Siddhi Software Company Home">
+      <a href="/" class="logo" aria-label="Siddhi Software Company Home">
         <img src="assests/siddhi-logo.png" alt="Siddhi Software Company Logo" class="brand-logo-img">
       </a>
 
@@ -1401,6 +1401,23 @@
 
 
   <script>
+    // Ensure on page reload the browser stays at hero/top and doesn't jump to old URL hash
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // Check if the current page load is a reload
+    const navEntries = performance.getEntriesByType('navigation');
+    const isReload = (navEntries.length > 0 && navEntries[0].type === 'reload') ||
+                     (window.performance && window.performance.navigation && window.performance.navigation.type === 1);
+
+    if (isReload) {
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      window.scrollTo(0, 0);
+    }
+
     window.addEventListener("scroll", function () {
       const nav = document.getElementById("navbar");
 
@@ -1409,6 +1426,25 @@
       } else {
         nav.classList.remove("scrolled");
       }
+
+      // If user scrolls back up near the top/hero section, clear old hash so reload stays at top
+      if (window.scrollY < 250 && window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    }, { passive: true });
+
+    // Smooth scroll for anchor links with hash cleanup
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+          history.replaceState(null, '', targetId);
+        }
+      });
     });
 
     // Active Link Scroll Highlighting
