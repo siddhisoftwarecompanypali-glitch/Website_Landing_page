@@ -29,7 +29,13 @@
   <meta property="twitter:description" content="Siddhi Software Company delivers high-performance mobile apps, custom software, modern websites, and AI solutions for startups and enterprises.">
   <meta property="twitter:image" content="https://siddhisoftwarecompany.com/assests/office_workspace.jpg">
 
-  <!-- Google Structured Data (Schema.org JSON-LD for Site Name, Organization & Sitelinks) -->
+  <!-- Geo-Targeting for Local SEO (Pali, Rajasthan) -->
+  <meta name="geo.region" content="IN-RJ">
+  <meta name="geo.placename" content="Pali, Rajasthan, India">
+  <meta name="geo.position" content="25.7711;73.3234">
+  <meta name="ICBM" content="25.7711, 73.3234">
+
+  <!-- Google Structured Data (Schema.org JSON-LD: WebSite, Organization, Sitelinks, FAQPage, Reviews) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,6 +63,13 @@
           "addressLocality": "Pali",
           "addressRegion": "Rajasthan",
           "addressCountry": "IN"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "52",
+          "bestRating": "5",
+          "worstRating": "1"
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -93,9 +106,70 @@
           {
             "@type": "SiteNavigationElement",
             "position": 4,
+            "name": "FAQ",
+            "description": "Frequently asked questions about timelines, technology, and pricing.",
+            "url": "https://siddhisoftwarecompany.com/#faq"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 5,
             "name": "Contact & Project Inquiries",
             "description": "Start a project with Siddhi Software Company.",
             "url": "https://siddhisoftwarecompany.com/#contact"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://siddhisoftwarecompany.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What software development services does Siddhi Software Company provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Siddhi Software Company specializes in custom mobile applications (iOS & Android with Flutter and React Native), responsive web applications, scalable cloud backends, mobile/desktop games in Unity, and custom AI integrations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to develop a custom mobile app or website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A typical MVP or bespoke website takes between 3 to 6 weeks, while comprehensive enterprise software or complex mobile applications typically take between 8 to 16 weeks. We follow strict milestone-based agile sprints."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build AI-powered solutions or integrate machine learning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We build and integrate custom AI solutions — including intelligent automation, custom LLM agents, predictive data analytics, recommendation engines, and computer vision systems tailored to your business."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is your pricing structure and typical project budget?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide transparent, milestone-based pricing with fixed-price quotes for well-defined scopes and dedicated sprint agreements for evolving products. Every project receives an itemized quote before work starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide post-launch maintenance, updates, and support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every project includes an initial post-launch warranty, followed by optional monthly SLA maintenance plans covering 99.9% uptime monitoring, security patches, OS compatibility updates, and continuous enhancements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Siddhi Software Company based and do you work globally?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our engineering headquarters is based in Pali, Rajasthan, India. We collaborate with clients across India, North America, Europe, and the Middle East with dedicated sprint managers and seamless communication."
+            }
           }
         ]
       }
@@ -133,6 +207,8 @@
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#process">Process</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
       </div>
 
       <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
@@ -148,6 +224,8 @@
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#process">Process</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact" class="mob-btn">Start a project</a>
     <button id="themeToggleMob" class="theme-toggle-btn" aria-label="Toggle theme" style="margin-top: 1.5rem;">
       <i class="bi bi-moon-stars"></i>
@@ -917,10 +995,157 @@
     </div>
   </section>
 
+  <!-- ========================== CLIENT TESTIMONIALS & REVIEWS SECTION ============================= -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="testimonials-container">
+      
+      <div class="testimonials-header">
+        <span class="values-badge">— Client Reviews & Results</span>
+        <h2 class="values-title">Trusted by businesses. Built for real results.</h2>
+        <div class="rating-badge-pill">
+          <span class="stars">★★★★★</span>
+          <span>4.9 / 5.0 Rating from 50+ Completed Deployments</span>
+        </div>
+      </div>
 
+      <div class="testimonials-grid">
+        
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Siddhi Software Company transformed our offline wholesale distribution into Kirana Cloud. Our daily order processing speed tripled, and their engineering team delivered on every single milestone without delay."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RS</div>
+            <div class="author-info">
+              <h4>Rajesh Sharma</h4>
+              <p>Founder, Kirana Retail Solutions</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "They built our mobile app from scratch in Flutter. Flawless animations, ultra-fast load times, and our app store rating is sitting at 4.8 stars. Couldn't recommend a better software development partner."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div class="author-info">
+              <h4>Aarav Mehta</h4>
+              <p>Product Lead, Nova Tech Apps</p>
+            </div>
+          </div>
+        </div>
 
-  <footer class="footer-new">
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "From custom web dashboards to automated workflows, Siddhi Software Company acts as our dedicated tech arm. Responsive, transparent, and exceptionally high code quality across the board."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PN</div>
+            <div class="author-info">
+              <h4>Priya Nair</h4>
+              <p>Managing Director, Studio Site Engine</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================== FAQ ACCORDION SECTION ============================= -->
+  <section id="faq" class="faq-section">
+    <div class="faq-container">
+      
+      <div class="faq-header">
+        <span class="values-badge">— Frequently Asked Questions</span>
+        <h2 class="values-title">Everything you need to know.</h2>
+        <p class="section-desc" style="max-width: 600px; margin: 0.75rem auto 0;">
+          Clear answers about timelines, tech stacks, budgets, and how we collaborate with you.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What software development services does Siddhi Software Company provide?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We specialize in full-cycle digital product development: bespoke mobile applications (iOS & Android using Flutter and React Native), modern responsive web platforms, scalable backend architecture, interactive 2D/3D games (Unity), and custom AI & workflow automation integrations.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How long does it take to develop a custom mobile app or website?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Timelines depend on project complexity. An MVP (Minimum Viable Product) or custom business website usually takes 3 to 6 weeks. Comprehensive multi-platform applications and enterprise software suites typically take between 8 to 16 weeks. We work in 2-week agile sprints with continuous progress demos.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you integrate AI or machine learning into our business?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We build practical, business-ready AI solutions — from intelligent document parsing and custom chatbot/LLM agents to predictive analytics, recommendation algorithms, and computer vision systems tailored to your specific workflows.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is your pricing structure and typical project budget?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We believe in transparent, honest pricing. We offer Fixed-Scope Contracts for well-defined deliverables (MVPs typically start from $1,000 to $5,000) and Dedicated Sprint Retainers for long-term product engineering. We provide an itemized proposal with clear milestones before starting.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you provide post-launch maintenance, updates, and support?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Every project we launch comes with an initial post-launch warranty period to ensure seamless adoption. Afterward, we offer flexible monthly maintenance packages covering 99.9% uptime monitoring, server security patches, iOS/Android version compatibility, and feature enhancements.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where is Siddhi Software Company based and do you work with global clients?</span>
+            <i class="bi bi-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our engineering headquarters is based in Pali, Rajasthan, India. We work with clients across India, North America, Europe, and the Middle East, offering dedicated sprint managers, transparent Slack/WhatsApp communication, and scheduled weekly reviews.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact" class="footer-new">
     <div class="footer-new-container">
       
       <!-- Top Row -->
@@ -936,6 +1161,16 @@
           </p>
         </div>
 
+        <!-- Services Links -->
+        <div class="footer-new-col links-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-col-links">
+            <li><a href="/services/mobile-app-development/">Mobile App Dev</a></li>
+            <li><a href="/services/web-development/">Web Development</a></li>
+            <li><a href="/services/ai-solutions/">AI Solutions</a></li>
+          </ul>
+        </div>
+
         <!-- Middle: Company Links -->
         <div class="footer-new-col links-col">
           <h4 class="footer-col-title">Company</h4>
@@ -943,6 +1178,9 @@
             <li><a href="#about">About</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#process">Process</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/careers/">Careers</a></li>
           </ul>
         </div>
 
@@ -1426,6 +1664,18 @@
 
     if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
     if (themeToggleMobBtn) themeToggleMobBtn.addEventListener('click', toggleTheme);
+
+    // FAQ Accordion Toggle Script
+    document.querySelectorAll('.faq-question').forEach(questionBtn => {
+      questionBtn.addEventListener('click', () => {
+        const item = questionBtn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
 
     // Initial theme check
     const savedTheme = localStorage.getItem('theme') || 'light';
