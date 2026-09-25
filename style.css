@@ -2243,6 +2243,7 @@ a {
   text-align: left;
 }
 
+.values-badge,
 .values-badge-text {
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
