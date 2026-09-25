@@ -2795,7 +2795,7 @@ a {
 
   #navbar.scrolled {
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-bg);
   }
 
   .brand-logo-img {
@@ -2803,30 +2803,35 @@ a {
   }
 
   .nav-links,
-  .nav-btn {
-    display: none;
+  .nav-actions {
+    display: none !important;
   }
 
-  /* Show hamburger menu */
+  /* Show crisp hamburger icon on right */
   .menu-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
     cursor: pointer;
+    padding: 6px;
+    color: var(--text-primary);
+    font-size: 2rem;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+    z-index: 1002;
   }
 
-  .menu-icon img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-    filter: invert(1);
+  .menu-icon:hover {
+    color: #0055d4;
   }
 
-  #navbar.scrolled .menu-icon img {
-    filter: invert(1);
-  }
-
-  .menu-icon.active img {
-    transform: rotate(90deg);
+  .menu-icon i {
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+    pointer-events: none;
   }
 
   #mobileMenu {
@@ -2874,7 +2879,7 @@ a {
   }
 
   #mobileMenu .mob-btn {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.85rem 2.5rem;
     background: #0055d4;
     color: #ffffff !important;
@@ -2882,6 +2887,49 @@ a {
     font-size: 1.1rem;
     font-weight: 600;
     box-shadow: 0 10px 20px rgba(0, 85, 212, 0.15);
+  }
+
+  /* Mobile Theme Switcher inside Mobile Menu */
+  .mobile-theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1.8rem;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+    box-shadow: 0 4px 12px var(--shadow-color);
+  }
+
+  .mobile-theme-toggle-btn i {
+    font-size: 1.15rem;
+    color: #0055d4;
+    line-height: 1;
+  }
+
+  #mobileMenu.open .mobile-theme-toggle-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-theme-toggle-btn:hover {
+    background: #0055d4;
+    color: #ffffff;
+    border-color: #0055d4;
+  }
+
+  .mobile-theme-toggle-btn:hover i {
+    color: #ffffff;
   }
 
   /* Hero Section Mobile */
