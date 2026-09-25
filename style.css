@@ -190,6 +190,13 @@ a {
   font-weight: 700;
 }
 
+/* Nav Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Nav Button */
 .nav-btn {
   font-family: "Inter", sans-serif;
