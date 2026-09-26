@@ -35,21 +35,22 @@
   <meta name="geo.position" content="25.7711;73.3234">
   <meta name="ICBM" content="25.7711, 73.3234">
 
-  <!-- Google Structured Data (Schema.org JSON-LD: WebSite, Organization, Sitelinks, FAQPage, Reviews) -->
+  <!-- Google Site Name Structured Data (Official Google Recommendation) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Siddhi Software Company",
+    "alternateName": ["Siddhi Software", "Siddhi Software Company Pali"],
+    "url": "https://siddhisoftwarecompany.com/"
+  }
+  </script>
+
+  <!-- Google Structured Data (Organization, LocalBusiness, FAQPage, Reviews) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://siddhisoftwarecompany.com/#website",
-        "url": "https://siddhisoftwarecompany.com/",
-        "name": "Siddhi Software Company",
-        "alternateName": ["Siddhi Software", "Siddhi Software Company Pali"],
-        "publisher": {
-          "@id": "https://siddhisoftwarecompany.com/#organization"
-        }
-      },
       {
         "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
         "@id": "https://siddhisoftwarecompany.com/#organization",
